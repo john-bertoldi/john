@@ -65,7 +65,7 @@ r  Para Radiciação
         print(number_1 ** (1/2))
 
     else:
-        print('Você não inseriu um sinal válido.')
+        print('Você não inseriu um sinal, ou número válido.')
     again()
 
 
