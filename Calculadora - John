@@ -1,0 +1,87 @@
+def welcome():
+    print('''
+Bem-vindo a Calculadora!
+''')
+
+
+def calculate():
+    operation = input('''
+Digite uma das operações abaixo que gostaria de executar:
++  Para Adição
+-  Para Subtração
+*  Para Multiplicação
+/  Para Divisão
+%  Para Modulação
+^  Para Potenciação
+r  Para Radiciação
+''')
+
+    if operation == '+':
+        number_1 = int(input('Inserir o primeiro número: '))
+        number_2 = int(input('Inserir o segundo número: '))
+
+        print('{} + {} = '.format(number_1, number_2))
+        print(number_1 + number_2)
+
+    elif operation == '-':
+        number_1 = int(input('Inserir o primeiro número: '))
+        number_2 = int(input('Inserir o segundo número: '))
+
+        print('{} - {} = '.format(number_1, number_2))
+        print(number_1 - number_2)
+
+    elif operation == '*':
+        number_1 = int(input('Inserir o primeiro número: '))
+        number_2 = int(input('Inserir o segundo número: '))
+
+        print('{} * {} = '.format(number_1, number_2))
+        print(number_1 * number_2)
+
+    elif operation == '/':
+        number_1 = int(input('Inserir o primeiro número: '))
+        number_2 = int(input('Inserir o segundo número: '))
+
+        print('{} / {} = '.format(number_1, number_2))
+        print(number_1 / number_2)
+
+    elif operation == '%':
+        number_1 = int(input('Inserir o primeiro número: '))
+        number_2 = int(input('Inserir o segundo número: '))
+
+        print('{} % {} = '.format(number_1, number_2))
+        print(number_1 % number_2)
+
+    elif operation == '^':
+        number_1 = int(input('Inserir o primeiro número: '))
+        number_2 = int(input('Inserir o segundo número: '))
+
+        print('{} ** {} = '.format(number_1, number_2))
+        print(number_1 ** number_2)
+
+    elif operation == 'r':
+        number_1 = int(input('Inserir o número: '))
+
+        print('{} **(1/2) = '.format(number_1))
+        print(number_1 ** (1/2))
+
+    else:
+        print('Você não inseriu um sinal válido.')
+    again()
+
+
+def again():
+    calc_again = input('''
+Gostaria de calcular de novo?
+Digite S para Sim ou N para Não.
+''')
+
+    if calc_again.upper() == 'S':
+        calculate()
+    elif calc_again.upper() == 'N':
+        print('Até a próxima!')
+    else:
+        again()
+
+
+welcome()
+calculate()
